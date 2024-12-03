@@ -42,13 +42,13 @@ const App = () => {
   }, [calculatePositionEvaluation]);
 
   async function requestPrediction(frame) {
-    const response = await fetch("https://included-top-midge.ngrok-free.app/infer/workflows/luciano-tg54j/chess-game-evaluator", {
+    const response = await fetch("http://localhost:9001/infer/workflows/luciano-tg54j/chess-game-evaluator", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        api_key: "JP5JABBaG0PEjyVwxzLQ",
+        api_key: process.env.REACT_APP_API_KEY,
         inputs: {
           image: { type: "url", value: frame },
           orientation: 2,
