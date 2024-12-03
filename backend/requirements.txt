@@ -1,0 +1,5 @@
+inference
+flask
+flask_socketio
+flask-cors
+opencv-python
