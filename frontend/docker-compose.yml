@@ -1,11 +1,9 @@
-version: "3.8"
-
 services:
   frontend:
     build:
-      context: ./frontend
+      context: ./
     env_file:
-      - ./frontend/.env
+      - /.env
     networks:
       - app-network
     ports:
