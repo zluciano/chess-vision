@@ -5,6 +5,10 @@ It also provides stats such as the position evaluation and the best move
 
 # Run the project
 
+## Set up inference pipeline
+
+`pip install inference && inference server start`
+
 ## Backend
 
 `pip install -r requirements.txt`
