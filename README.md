@@ -3,6 +3,9 @@ This project envisions to translate your physical gaame of chess into a digital 
 
 It also provides stats such as the position evaluation and the best move
 
+<img width="1481" alt="sample_image" src="https://github.com/user-attachments/assets/cc5e811a-65bb-420c-ad1b-13d323cd54cd">
+
+
 # Run the project
 
 ## Set up inference pipeline
