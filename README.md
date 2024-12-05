@@ -3,7 +3,7 @@ This project envisions to translate your physical gaame of chess into a digital 
 
 It also provides stats such as the position evaluation and the best move
 
-<img width="1481" alt="sample_image" src="https://github.com/user-attachments/assets/cc5e811a-65bb-420c-ad1b-13d323cd54cd">
+<img width="1481" alt="Screenshot 2024-12-05 at 07 55 07" src="https://github.com/user-attachments/assets/8cabf291-19d8-4798-b35d-18cd05086abd">
 
 
 # Run the project
