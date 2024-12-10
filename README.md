@@ -23,7 +23,7 @@ Update the `ROBOFLOW_API_KEY=` variable in the `backend/.env` file if you want t
 
 ## Frontend
 
-Update the `ROBOFLOW_API_KEY=` variable in the `frontend/.env` file if you want to use the API solution
+Update the `REACT_APP_API_KEY=` variable in the `frontend/.env` file if you want to use the API solution
 
 `npm install`
 
