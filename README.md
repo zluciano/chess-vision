@@ -12,9 +12,17 @@ It also provides stats such as the position evaluation and the best move
 
 `pip install inference && inference server start`
 
+Update the `ROBOFLOW_API_KEY=` variable in the `backend/.env` file if you want to use the socket solution (default)
+
+Update the `REACT_APP_API_KEY=` variable in the `frontend/.env` file if you want to use the API solution
+
+## Run with `docker-compose`
+
+`docker-compose up`
+
 ## Backend
 
-Update the `ROBOFLOW_API_KEY=` variable in the `backend/.env` file if you want to use the socket solution (default)
+`cd backend`
 
 `pip install -r requirements.txt`
 
@@ -23,7 +31,7 @@ Update the `ROBOFLOW_API_KEY=` variable in the `backend/.env` file if you want t
 
 ## Frontend
 
-Update the `REACT_APP_API_KEY=` variable in the `frontend/.env` file if you want to use the API solution
+`cd frontend`
 
 `npm install`
 
