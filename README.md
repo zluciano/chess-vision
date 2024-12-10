@@ -14,12 +14,16 @@ It also provides stats such as the position evaluation and the best move
 
 ## Backend
 
+Update the `ROBOFLOW_API_KEY=` variable in the `backend/.env` file if you want to use the socket solution (default)
+
 `pip install -r requirements.txt`
 
 `python main.py`
 
 
 ## Frontend
+
+Update the `ROBOFLOW_API_KEY=` variable in the `frontend/.env` file if you want to use the API solution
 
 `npm install`
 
