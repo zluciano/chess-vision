@@ -66,16 +66,6 @@ const App = () => {
     }
   }
 
-  const isValidFen = (fen) => {
-    try {
-      new Chess(fen);
-      return true
-    }
-    catch {
-      return false
-    }
-  };
-
   const bestMove = () => {
     return bestMovesCache.current.get(fen);
   };
@@ -89,10 +79,8 @@ const App = () => {
         setFen(newFen);
         setVideoFrame(data.image);
         setPositionEvaluation(data.best_move?.eval)
-        if (isValidFen(data.fen)) {
-          const bestMoveData = data.best_move;
-          bestMovesCache.current.set(newFen, bestMoveData);
-        }
+        const bestMoveData = data.best_move;
+        bestMovesCache.current.set(newFen, bestMoveData);
       }
     };
 
@@ -227,7 +215,7 @@ const App = () => {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
     
-      while (true) {
+      while (!tracking) {
         const frame = await imageCapture.grabFrame();
         canvas.width = frame.width;
         canvas.height = frame.height;
@@ -238,7 +226,7 @@ const App = () => {
       }
     };
     trackWebcam()
-  }, []);
+  }, [tracking]);
     
   
   useEffect(() => {
@@ -399,7 +387,7 @@ const App = () => {
           <Box display={'flex'} alignItems={'center'} justifyContent={'center'} >
             {(videoFrame || rawVideoFrame) && webcamScreen}
             <Chessboard
-              customArrows={showBestMove ? [[best.from, best.to]] : []}
+              customArrows={showBestMove && best && best.from && best.to ? [[best.from, best.to]] : []}
               position={fen}
               onPieceDrop={onDrop}
               boardWidth={window.innerWidth/3}
